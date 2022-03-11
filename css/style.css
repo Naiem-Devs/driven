@@ -5528,10 +5528,8 @@ p {
     font-family: 'Proxima Nova Rg';
     src: url('../fonts/ProximaNova-Regular.eot');
     src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
         url('../fonts/ProximaNova-Regular.woff') format('woff'),
-        url('../fonts/ProximaNova-Regular.ttf') format('truetype'),
-        url('../fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
+        url('../fonts/ProximaNova-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -5541,10 +5539,8 @@ p {
     font-family: 'ProximaNova';
     src: url('../fonts/ProximaNova-Medium.eot');
     src: url('../fonts/ProximaNova-Medium.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/ProximaNova-Medium.woff2') format('woff2'),
         url('../fonts/ProximaNova-Medium.woff') format('woff'),
-        url('../fonts/ProximaNova-Medium.ttf') format('truetype'),
-        url('../fonts/ProximaNova-Medium.svg#ProximaNova-Medium') format('svg');
+        url('../fonts/ProximaNova-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -5556,10 +5552,8 @@ p {
     font-family: 'Proxima Nova Rg';
     src: url('../fonts/ProximaNova-Bold.eot');
     src: url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/ProximaNova-Bold.woff2') format('woff2'),
         url('../fonts/ProximaNova-Bold.woff') format('woff'),
-        url('../fonts/ProximaNova-Bold.ttf') format('truetype'),
-        url('../fonts/ProximaNova-Bold.svg#ProximaNova-Bold') format('svg');
+        url('../fonts/ProximaNova-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -5596,6 +5590,13 @@ header {
     float: left;
     width: 42%;
     display: inline-block;
+}
+
+.header-lft a img {
+    height: 100%;
+    width: 100%;
+    max-width: 160px;
+    object-fit: none;
 }
 
 .header-rgt {
@@ -6962,6 +6963,7 @@ section.apartment-plan-sec .apartment-heading {
 
 .leadership-team-top .image-holder img {
     width: 100%;
+    height: 100%;
 }
 
 .leadership-team-top .image-holder .text-inner {
@@ -7018,6 +7020,11 @@ section.apartment-plan-sec .apartment-heading {
 
 .leadership-right {
     background: #fafafa;
+}
+
+.leadership-right .leadership-holder img {
+    height: 100%;
+    width: 100%;
 }
 
 .leadership-text {
@@ -7085,6 +7092,7 @@ section.apartment-plan-sec .apartment-heading {
 .team-box .image-holder img {
     width: 100%;
     transition: .3s;
+    height: 100%;
 }
 
 .team-box {
@@ -7123,6 +7131,11 @@ section.apartment-plan-sec .apartment-heading {
 /****** DRIVEN TEAM  *******/
 .driven-team-inner .image-holder {
     margin: 40px 0;
+}
+
+.image-holder img {
+    width: 100%;
+    height: 100%;
 }
 
 .driven-team-box {
@@ -7175,6 +7188,8 @@ section.apartment-plan-sec .apartment-heading {
 
 .estate-company-box .imahe-holder img {
     transition: .3s;
+    width: 100%;
+    height: 100%;
 }
 
 .estate-company-box .imahe-holder:hover img {
@@ -7317,7 +7332,10 @@ section.apartment-plan-sec .apartment-heading {
 }
 
 .teatimonial-box .image-holder img {
-    width: 120px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
 }
 
 .teatimonial-box .text-box {
@@ -7420,6 +7438,7 @@ section.apartment-plan-sec .apartment-heading {
 
 .preferred-partners .preferred-box .image-holder img {
     width: 100%;
+    height: 100%;
 }
 
 .preferred-partners .preferred-box .text-box {
@@ -8022,6 +8041,11 @@ nav ul li:last-child .subMenu ul li .sub {
     padding-right: 0;
     margin-left: 10px;
     cursor: pointer;
+}
+
+.dpx-header-search-box img {
+    height: 100%;
+    object-fit: none;
 }
 
 .dpx-search-area-floating .dpx-search-area-close {
