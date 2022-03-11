@@ -5625,7 +5625,6 @@ header {
     vertical-align: top;
 }
 
-/*.search:after{position: absolute;content: "\f002";font-family: 'FontAwesome';right: 15px;font-size: 28px;color: #ffffff;top: 3px;}*/
 .search input {
     font-size: 14px;
     text-align: left;
@@ -5644,8 +5643,6 @@ header {
 nav {
     position: relative;
 }
-
-/*nav:before{position: absolute;content: '';background: #ffffff;width: 28px;height: 3px;transform: rotate(90deg);left: -11px;top: 19px;}*/
 nav ul {
     padding: 0;
 }
@@ -5677,11 +5674,11 @@ nav ul li a.menu1 {
 nav ul li a.menu1:after {
     position: absolute;
     content: "";
-    width: 17px;
-    height: 13px;
+    width: 15px;
+    height: 8px;
     background: url(../images/down-nv.png);
-    right: -25px;
-    top: 5px;
+    right: -24px;
+    top: 8px;
     filter: invert(10);
     background-size: cover;
     background-repeat: no-repeat;
@@ -5708,7 +5705,11 @@ nav ul li a.menu1:after {
 
 .icons a {
     display: inline-block;
-    padding: 0 11px;
+    padding: 0;
+}
+
+.icons a:nth-child(2) {
+    margin: 0 15px;
 }
 
 .icons a i {
@@ -6438,9 +6439,10 @@ nav .subMenu ul li.active>a {
     left: 11px;
 }
 
-.apartment-sale-box .text-box a.heart-icon i {
-    color: #000000;
+.apartment-sale-box .text-box a.heart-icon i svg {
     font-size: 21px;
+    width: 30px;
+    height: 25px;
 }
 
 .apartment-sale-box .text-box h4 {
@@ -6514,6 +6516,14 @@ nav .subMenu ul li.active>a {
     padding: 0 7px;
 }
 
+.call-btn li a i.fa.fa-phone svg {
+    width: 21px;
+}
+
+.call-btn li a i.fa.fa-phone svg path:last-child {
+    fill: #fff;
+}
+
 .call-btn li a {
     background-color: #263977;
     height: 40px;
@@ -6534,11 +6544,21 @@ nav .subMenu ul li.active>a {
 .call-btn li a i {
     color: #fff;
     font-size: 23px;
-    margin-left: 15px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .call-btn li a.whatsapp-btn {
     background-color: #22D672;
+}
+
+.call-btn li a.whatsapp-btn i svg {
+    width: 21px;
+}
+
+.call-btn li a.whatsapp-btn i svg path {
+    fill: #fff;
 }
 
 .call-btn li a.whatsapp-btn:hover {
@@ -6561,18 +6581,16 @@ nav .subMenu ul li.active>a {
     margin-right: 30px;
 }
 
-/*.pagination ul li:last-child{
-    margin: 0;
-}*/
 .pagination ul li a {
     color: #222222;
     font-size: 19px;
     font-family: 'Proxima Nova Rg';
     font-weight: normal;
 }
-
-.pagination ul li a i {
-    font-size: 23px;
+.pagination ul li a i.angle-right svg {
+    width: 17px;
+    transform: rotate(270deg);
+    margin-right: -15px;
 }
 
 .apartment-sale-right {
@@ -6733,6 +6751,28 @@ iframe {
     margin: 0 3px 0 3px;
 }
 
+.apartment-list ul li i.fa.fa-building svg {
+    width: 18px;
+    height: 16px;
+}
+
+.apartment-list ul li i.fa.fa-bed svg {
+    width: 17px;
+}
+
+.apartment-list ul li i.fa.fa-bed svg path {
+    fill: #6A6A6A !important;
+    stroke: #6A6A6A !important;
+}
+
+.apartment-list ul li i.fa.fa-bath svg {
+    width: 16px;
+}
+
+.apartment-list ul li i svg path {
+    fill: #6A6A6A;
+}
+
 .apartment-right-box .text-box h3 {
     color: #222222;
     font-size: 20px;
@@ -6744,6 +6784,10 @@ iframe {
 /****** APARTMENTS PLANS PAGE ******/
 .apartment-plan-sec {
     padding: 50px 0;
+}
+
+section.apartment-plan-sec .apartment-heading {
+    margin-bottom: 40px;
 }
 
 .breadcrumb ul {
@@ -6999,9 +7043,22 @@ iframe {
 /*.leadership-text ul li:last-child{
     margin: 0;
 }*/
-.leadership-text ul li a {
-    color: #6a6a6a;
-    font-size: 20px;
+.leadership-text ul li a i svg {
+    width: 20px;
+    height: 20px;
+}
+
+.leadership-text ul li a i.fa.fa-facebook-official svg {
+    width: 17px;
+    margin-right: 4px;
+}
+
+.leadership-text ul li a i svg g {
+    fill: #6a6a6a;
+}
+
+.leadership-text ul li a i svg path {
+    fill: #6a6a6a !important;
 }
 
 .team-detail {
@@ -7019,11 +7076,21 @@ iframe {
 
 .team-box .image-holder img {
     width: 100%;
+    transition: .3s;
 }
 
 .team-box {
     background: #fafafa;
     margin: 10px 0;
+}
+
+.team-box .image-holder {
+    overflow: hidden;
+}
+
+.team-box .image-holder:hover img {
+    transform: scale(1.05);
+    object-fit: cover;
 }
 
 .team-box .text-box {
@@ -7089,6 +7156,23 @@ iframe {
     margin: 10px 0;
 }
 
+.estate-company-inner {
+    margin-top: 30px;
+}
+
+.estate-company-box .imahe-holder {
+    overflow: hidden;
+    transition: .3s;
+}
+
+.estate-company-box .imahe-holder img {
+    transition: .3s;
+}
+
+.estate-company-box .imahe-holder:hover img {
+    transform: scale(1.1);
+}
+
 .estate-company-box .text-box {
     padding: 20px 15px;
 }
@@ -7150,6 +7234,17 @@ iframe {
 .card-head a span {
     color: #777;
     font-size: 14px;
+    position: relative;
+}
+
+.card-head a span:after {
+    content: "+";
+    position: absolute;
+    font-size: 30px;
+    color: #777;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
 }
 
 .card-head a span .fa-minus {
@@ -7235,6 +7330,12 @@ iframe {
 .teatimonial-box .text-box p i {
     color: #09001f;
     padding: 0;
+    font-size: 40px;
+    line-height: 0;
+    font-style: normal;
+    font-weight: 700;
+    transform: translateY(16px);
+    display: inline-block;
 }
 
 .teatimonial-box .text-box h4 {
@@ -7373,17 +7474,21 @@ footer {
 }
 
 .footer-top {
-    padding: 0 0 55px;
+    padding: 0 0 40px;
 }
 
 .footer-top ul {
-    ;
-    font-size: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
+.footer-top ul .clearfix {
+    display: flex;
+}
+
+
 .footer-top ul li {
-    display: inline-block;
-    ;
     vertical-align: top;
     width: 25%;
 }
@@ -7420,7 +7525,7 @@ footer {
     font-weight: normal;
     color: #ffffff;
     display: block;
-    margin: 0 0 2px 0;
+    margin: 0 0 5px 0;
 }
 
 .footer-btm {
@@ -7437,6 +7542,11 @@ footer {
     align-items: center;
 }
 
+.foto .foto-social ul {
+    display: flex;
+    align-items: center;
+}
+
 .foto-follow p {
     color: #ffffff;
     font-size: 24px;
@@ -7449,7 +7559,7 @@ footer {
 .foto-social ul li {
     display: inline-block;
     padding: 0;
-    margin-right: 23px;
+    margin-right: 20px;
 }
 
 .foto-social ul li:last-child {
@@ -7460,17 +7570,15 @@ footer {
     margin: 0;
 }
 
-.foto-social ul li a i {
-    color: #fff;
-    font-size: 35px;
-}
+.foto-social ul li a i.fa.fa-instagram {margin-right: -8px;margin-left: 9px;}
 
 .footer-btm-rgt-in a img {
     height: 70px;
+    object-fit: scale-down;
 }
 
 .foto-bottom p {
-    font-size: 25px;
+    font-size: 22px;
     line-height: 41px;
     color: rgba(250, 250, 250, 0.7);
     font-family: 'ProximaNova';
@@ -7551,8 +7659,6 @@ footer {
     z-index: 100;
 }
 
-.media-in {}
-
 .media-in ul {
     text-align: center;
 }
@@ -7561,11 +7667,6 @@ footer {
     display: inline-block;
     padding: 10px 27px;
 }
-
-.media-in ul li a {}
-
-.media-in ul li a i {}
-
 .media-in ul li a.call1 i {
     color: #4167B1;
     width: 31px;
@@ -7937,9 +8038,6 @@ nav ul li:last-child .subMenu ul li .sub {
     font-family: 'FontAwesome';
     position: absolute;
 }
-
-.menu-icons {}
-
 .dpx-tab-sale {
     width: 50%;
     float: left;
