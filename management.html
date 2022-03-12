@@ -1030,7 +1030,7 @@
                                         </div> 
                                     </div>
                                     <div class="footer-btm-rgt-in">
-                                        <a href="#"><img src="https://ik.imagekit.io/sgmmslom0im/f-btm-img_4ygbAK9hA.png?ik-sdk-version=javascript-1.4.3&updatedAt=1647027592392" alt="f-btm-img"> </a>
+                                        <a href="#"><img src="https://ik.imagekit.io/sgmmslom0im/footer-logo_piKefz6MWsSI.png?ik-sdk-version=javascript-1.4.3&updatedAt=1647044483299" alt="f-btm-img"> </a>
                                     </div>
                                 </div>
 
@@ -1086,7 +1086,33 @@
                 </div>
             </div>
             <!--footer-end-->
-        <script src="js/custom.js" ></script>
+            <script >
+                // search bar Active
+                var srcBtn = document.querySelector('.search_btn')
+                var srcCloseBtn = document.querySelector('.close_src')
+                var searSec = document.querySelector('.search_bar')
+    
+                srcBtn.addEventListener('click', function() {
+                    searSec.classList.add("active")
+                })
+                srcCloseBtn.addEventListener('click', function (){
+                    searSec.classList.remove("active")
+                })
+    
+                // search bar Tab Button Active
+                var srcFilterBtn = document.querySelectorAll('.search_top button');
+                srcFilterBtn.forEach(srcFilterBtns => {
+                    srcFilterBtns.addEventListener('click', () => {
+                        removeBtns()
+                        srcFilterBtns.classList.add('active')
+                    })
+                });
+                function removeBtns() {
+                    srcFilterBtn.forEach(srcFilterBtns => {
+                        srcFilterBtns.classList.remove('active')
+                    })
+                }
+            </script>
         </div>
     </body>
 </html>
